@@ -1,5 +1,7 @@
-<ng-container>
+<ng-container *transloco="let t">
   Hello, world!
+  <br />
+  {{ t("test") }}
   <br />
   <child />
 </ng-container>
