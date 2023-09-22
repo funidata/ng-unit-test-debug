@@ -1,20 +1,24 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Test1Component } from './test1.component';
-import { ChildComponent } from '../child/child.component';
+import { Test2Component } from './test2.component';
 
-describe('Test1Component', () => {
-  let fixture: ComponentFixture<Test1Component>;
+describe('Test2Component', () => {
+  let fixture: ComponentFixture<Test2Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [Test1Component],
+      declarations: [Test2Component],
       errorOnUnknownElements: true,
     }).compileComponents();
-    fixture = TestBed.createComponent(Test1Component);
+    fixture = TestBed.createComponent(Test2Component);
   });
 
   it('should exist', () => {
-    // Fails if ChildComponent is not in declarations AND errorOnUnknownElements === false.
+    /*
+      This should fail because ChildComponent is not declared in testing module
+      and errorOnUnknownElements is turned on. However, the test passes. The
+      only difference to Test1Component is that the root element includes
+      the Transloco structural directive.
+    */
     const component = fixture.componentInstance;
     expect(component).toBeTruthy();
   });

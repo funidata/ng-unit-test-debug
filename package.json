@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test --watch --browsers ChromeHeadless"
+    "test": "ng test --watch --browsers ChromeHeadless",
+    "test1": "ng test --watch --browsers ChromeHeadless --include src/app/test1/test1.component.spec.ts",
+    "test2": "ng test --watch --browsers ChromeHeadless --include src/app/test2/test2.component.spec.ts"
   },
   "private": true,
   "dependencies": {
