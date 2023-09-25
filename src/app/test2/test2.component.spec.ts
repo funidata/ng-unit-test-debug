@@ -22,12 +22,4 @@ describe('Test2Component', () => {
     const component = fixture.componentInstance;
     expect(component).toBeTruthy();
   });
-
-  xit('should render child', () => {
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('child')?.textContent).toContain(
-      'Just a child component.'
-    );
-  });
 });

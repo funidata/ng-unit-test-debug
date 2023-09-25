@@ -13,16 +13,9 @@ describe('Test1Component', () => {
   });
 
   it('should exist', () => {
-    // Fails if ChildComponent is not in declarations AND errorOnUnknownElements === false.
+    // As expected, fails if ChildComponent is not in declarations AND
+    // errorOnUnknownElements === true.
     const component = fixture.componentInstance;
     expect(component).toBeTruthy();
-  });
-
-  xit('should render child', () => {
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('child')?.textContent).toContain(
-      'Just a child component.'
-    );
   });
 });
